@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-info">
+    <h3>{{ product.nombre }}</h3>
+    <p>${{ product.precio | number }}</p>
+  </div>
+  <button class="delete-btn" (click)="onDelete($event)">
+    &#x2715;
+  </button>
+</div>

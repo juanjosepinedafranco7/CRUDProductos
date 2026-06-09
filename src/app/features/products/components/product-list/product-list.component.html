@@ -1,0 +1,14 @@
+<div class="list-container">
+  <div *ngIf="products.length === 0" class="empty-state">
+    <div class="icon-warning">!</div>
+    <p>No hay productos para mostrar</p>
+  </div>
+
+  <div *ngIf="products.length > 0" class="cards-grid">
+    <app-product-card
+      *ngFor="let prod of products"
+      [product]="prod"
+      (click)="onSelectProduct(prod)">
+    </app-product-card>
+  </div>
+</div>

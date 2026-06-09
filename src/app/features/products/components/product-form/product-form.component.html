@@ -1,0 +1,17 @@
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="nombre" name="nombre" autocomplete="off" />
+    </div>
+
+    <div class="form-group">
+      <label>Precio</label>
+      <input type="number" [(ngModel)]="precio" name="precio" />
+    </div>
+
+    <button type="submit" [disabled]="!isValid()">
+      {{ isEditMode ? 'Actualizar' : 'Crear' }}
+    </button>
+  </form>
+</div>
